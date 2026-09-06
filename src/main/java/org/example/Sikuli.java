@@ -21,9 +21,6 @@ public class Sikuli {
         Pattern pattern = new Pattern(imageURL).similar(0.7f);
         screen.wait(pattern, 100);
         screen.rightClick(pattern);
-
-        System.out.println("Botao Ok");
-
     }
 
 
