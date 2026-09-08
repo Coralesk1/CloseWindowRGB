@@ -20,7 +20,19 @@ public class Sikuli {
 
         Pattern pattern = new Pattern(imageURL).similar(0.7f);
         screen.wait(pattern, 100);
-        screen.rightClick(pattern);
+
+        screen.hover(pattern);
+        try {
+            Thread.sleep(400);
+        } catch (InterruptedException ignored) {}
+
+        screen.click(pattern);
+
+        try {
+            Thread.sleep(300);
+        } catch (InterruptedException ignored) {}
+
+        screen.click(pattern);
     }
 
 
